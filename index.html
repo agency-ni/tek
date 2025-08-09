@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKIRATEK | Système d'Acquisition Web pour Experts</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <meta name="description" content="Attirez et filtrez des clients qualifiés sans DM, prospection ni stories. Un système qui travaille pour vous 24/7.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#0ea5e9',
+                        dark: '#0f172a',
+                        light: '#f8fafc'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+          box-sizing: border-box;}
+
+        html, body {
+          overflow-x: hidden;
+          width: 100%;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+        }
+        .section-divider {
+            height: 8px;
+            background: linear-gradient(90deg, #2563eb 0%, #0ea5e9 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .btn-primary {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(37, 99, 235, 0.4);
+        }
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(37, 99, 235, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans bg-light text-dark">
+    <!-- Header -->
+    <header class="py-6 bg-white shadow-sm">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 rounded-lg gradient-bg flex items-center justify-center">
+                    <span class="text-white font-bold text-xl">A</span>
+                </div>
+                <h1 class="ml-3 text-2xl font-heading font-black text-dark">AKIRATEK</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="font-medium hover:text-primary transition">Accueil</a>
+                <a href="#offre" class="font-medium hover:text-primary transition">Offre</a>
+                <a href="#resultats" class="font-medium hover:text-primary transition">Résultats</a>
+                <a href="#pourquoi" class="font-medium hover:text-primary transition">Pourquoi moi</a>
+            </nav>
+            <a href="https://tally.so/r/3y58v6" class="hidden md:block btn-primary bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Réserver un audit
+            </a>
+            <button class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 bg-gradient-to-r from-primary to-secondary">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-white leading-tight mb-6">
+                    Attirez, filtrez & convertissez des clients <span class="underline">sans DM</span>
+                </h1>
+                <p class="text-xl text-blue-100 mb-8 max-w-2xl">
+                    Un système Web qui attire des prospects qualifiés, les éduque et les préqualifie automatiquement — même pendant que vous dormez.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="https://tally.so/r/3y58v6" class="btn-primary bg-white text-primary font-bold py-4 px-8 rounded-lg text-center hover:bg-gray-100 transition">
+                        Réserver un audit
+                    </a>
+                    <a href="#offre" class="btn-primary border-2 border-white text-white font-bold py-4 px-8 rounded-lg text-center hover:bg-white hover:text-primary transition">
+                        Découvrir l'offre
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="w-80 h-80 md:w-96 md:h-96 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-white bg-opacity-30 flex items-center justify-center">
+                            <div class="w-48 h-48 md:w-64 md:h-64 rounded-full bg-white bg-opacity-40 flex items-center justify-center">
+                                <div class="text-center p-6">
+                                    <i class="fas fa-cogs text-5xl text-white mb-4"></i>
+                                    <p class="text-white font-bold text-lg">Système d'Acquisition Web</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-dark mb-6">Coach/Consultant/<br>Formateur, tu en as marre de courir après tes prospects ?</h2>
+                <p class="text-xl text-gray-600">DM-stories-relances, c'est bientôt fini.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl border border-gray-100 card-hover">
+                    <div class="text-5xl text-primary mb-6">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Tu passes ton temps à répondre à des messages... sans suite</h3>
+                    <p class="text-gray-600">Ton agenda est vide ou rempli de gens pas vraiment qualifiés.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl border border-gray-100 card-hover">
+                    <div class="text-5xl text-primary mb-6">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Tu dépends à 100% de ton énergie pour faire des ventes</h3>
+                    <p class="text-gray-600">Acquisition désorganisée, difficulté à scaler.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl border border-gray-100 card-hover">
+                    <div class="text-5xl text-primary mb-6">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Tu repousses la structuration d’un vrai système</h3>
+                    <p class="text-gray-600">Par manque de temps ou clarté.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <div class="inline-block p-6 bg-blue-50 rounded-2xl max-w-4xl">
+                    <h3 class="text-2xl font-bold mb-4">Et si tu avais un système qui travaille à ta place ?</h3>
+                    <p class="text-lg text-gray-700">
+                        Imagine un site web ou une landing page qui attire des prospects qualifiés (même quand tu fais autre chose), filtre les touristes dès l’arrivée, éduque ton client avant ton appel, transmet ton offre de manière pro, sans DM, et automatise les étapes clés de ton acquisition.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section id="offre" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-dark mb-6">Ce que je t'installe concrètement</h2>
+                <p class="text-xl text-gray-600">Un système stratégique, pas juste un joli site</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm card-hover">
+                    <div class="feature-icon mb-6">
+                        <i class="fas fa-laptop-code text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Landing page ou site qui présente ton offre à ta place</h3>
+                    <p class="text-gray-600">Un outil de vente 24/7 qui parle pour toi quand tu n'es pas là.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm card-hover">
+                    <div class="feature-icon mb-6">
+                        <i class="fas fa-magnet text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Magnets à forte valeur perçue</h3>
+                    <p class="text-gray-600">Des contenus qui attirent et captivent ton audience idéale.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm card-hover">
+                    <div class="feature-icon mb-6">
+                        <i class="fas fa-route text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Tunnel avec texte clair (UX, persuasion, storytelling)</h3>
+                    <p class="text-gray-600">Un parcours optimisé pour convertir vos visiteurs en prospects qualifiés.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm card-hover">
+                    <div class="feature-icon mb-6">
+                        <i class="fas fa-robot text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Automations pour préqualifier et nourrir tes leads</h3>
+                    <p class="text-gray-600">Des séquences automatisées qui éduquent et préqualifient vos prospects.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm card-hover">
+                    <div class="feature-icon mb-6">
+                        <i class="fas fa-bullseye text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Positionnement optimisé pour vendre sans forcer</h3>
+                    <p class="text-gray-600">Un positionnement qui attire naturellement vos clients idéaux.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm card-hover">
+                    <div class="feature-icon mb-6">
+                        <i class="fas fa-chart-pie text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Analyse et optimisation continue</h3>
+                    <p class="text-gray-600">Suivi des performances et améliorations continues pour maximiser les résultats.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="resultats" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-dark mb-6">Résultats pour toi</h2>
+                <p class="text-xl text-gray-600">Ce que tu gagnes en mettant en place un système stratégique</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-8 text-primary">Côté pro :</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <i class="fas fa-briefcase text-primary"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Reprise de contrôle sur ton acquisition</h4>
+                                <p class="text-gray-600">Plus besoin de courir après les prospects.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <i class="fas fa-magnet text-primary"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">+ de leads préqualifiés</h4>
+                                <p class="text-gray-600">Des prospects prêts à acheter votre offre.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <i class="fas fa-chart-line text-primary"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Focus sur l’expertise et la conversion</h4>
+                                <p class="text-gray-600">Passez plus de temps à coacher et moins à vendre.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <i class="fas fa-brain text-primary"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Moins de charge mentale</h4>
+                                <p class="text-gray-600">Un système qui fonctionne même quand vous dormez.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-8 text-primary">Côté perso :</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <i class="fas fa-clock text-primary"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">+ de temps libre</h4>
+                                <p class="text-gray-600">Retrouvez du temps pour vous et vos proches.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <i class="fas fa-lightbulb text-primary"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Moins de pression émotionnelle</h4>
+                                <p class="text-gray-600">Finis les relances stressantes et les ventes à contre-cœur.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <i class="fas fa-heart text-primary"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Énergie pour ta zone de génie</h4>
+                                <p class="text-gray-600">Concentrez-vous sur ce que vous faites de mieux.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <i class="fas fa-spa text-primary"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Santé et équilibre</h4>
+                                <p class="text-gray-600">Un business qui vous libère plutôt qu'il ne vous emprisonne.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift Section -->
+    <section class="py-16 gradient-bg">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl p-8 md:p-12 shadow-xl">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-2/3 mb-8 md:mb-0 md:pr-8">
+                        <h2 class="text-3xl font-heading font-bold text-dark mb-4">🎁 Audit offert (valeur 197€)</h2>
+                        <p class="text-lg text-gray-700 mb-6">
+                            Je t'offre un audit rapide de ton système actuel (ou inexistant 😅) et je te montre :
+                        </p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>Les erreurs qui t'empêchent d'attirer les bons clients</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>Ce que tu peux mettre en place rapidement</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>Une projection concrète de ton système</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>Et si je peux vraiment t'aider</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/3">
+                        <div class="bg-gray-100 rounded-xl p-6 text-center">
+                            <div class="text-5xl font-bold text-primary mb-2">0€</div>
+                            <div class="text-gray-600 mb-6">Profitez maintenant!</div>
+                            <a href="https://tally.so/r/3y58v6" class="btn-primary bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg w-full block">
+                                Réserver un appel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Me Section -->
+    <section id="pourquoi" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-dark mb-6">Pourquoi moi ?</h2>
+                <p class="text-xl text-gray-600">Je ne fais pas juste un site. Je construis des machines à attirer les bons clients.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <div class="text-4xl text-primary mb-4">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2">SEO</h3>
+                            <p class="text-gray-600">Attirez des prospects qualifiés et ta visibilité via Google.</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <div class="text-4xl text-primary mb-4">
+                                <i class="fas fa-copy"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2">Copywriting</h3>
+                            <p class="text-gray-600">Des textes qui vendent sans forcer</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <div class="text-4xl text-primary mb-4">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2">Storytelling</h3>
+                            <p class="text-gray-600">Des parcours qui captivent et convertissent</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <div class="text-4xl text-primary mb-4">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2">Expérience terrain</h3>
+                            <p class="text-gray-600">Ex-ecommerçant, je connais la réalité du business</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h3 class="text-2xl font-bold mb-6">Mon objectif ?</h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Te faire gagner en clients, en temps, en liberté et en stabilité.
+                    </p>
+                    <div class="bg-blue-50 p-6 rounded-xl">
+                        <p class="text-lg italic text-gray-800">
+                            "La différence entre une activité et un business ? La structure que tu mets en place."
+                        </p>
+                        <p class="mt-4 font-bold">— AKIRATEK</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Who Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-center text-dark mb-16">Pour qui c’est fait (et pour qui non)</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-bold text-green-600 mb-6">✔️ C’est pour toi si :</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-xl"></i>
+                                <span>Tu as une offre validée</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-xl"></i>
+                                <span>Tu veux passer un cap sans devenir esclave des DM</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-xl"></i>
+                                <span>Tu es prêt à investir dans un système qui te libère</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-xl"></i>
+                                <span>Tu crées du contenu autour de ton offre/niche</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold text-red-600 mb-6">❌ Ce n’est pas pour toi si :</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-times-circle text-red-500 mt-1 mr-3 text-xl"></i>
+                                <span>Tu débutes ou n’as pas d’offre claire</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-times-circle text-red-500 mt-1 mr-3 text-xl"></i>
+                                <span>Tu n’es pas prêt à investir dans ton business</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-times-circle text-red-500 mt-1 mr-3 text-xl"></i>
+                                <span>Tu préfères rester dans l'action plutôt que la stratégie</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-16 text-center">
+                    <a href="https://tally.so/r/3y58v6" class="btn-primary bg-primary hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-lg text-lg">
+                        ➡️ Passe à l'action ici
+                    </a>
+                    <p class="mt-4 text-gray-600 italic">NB : Il est important de noter que si tu ne respectes pas le rendez-vous pris de ton initiative, nous nous réservons le droit de t’exclure définitivement de tout autre appel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consequences Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-dark mb-8">Et qu'est-ce qui se passe si tu ne passe pas à l'action maintenant ?</h2>
+                <p class="text-xl text-gray-700 mb-12">Rien ne changera… sauf que :</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-red-50 p-6 rounded-xl border border-red-100">
+                        <div class="text-4xl text-red-500 mb-4">
+                            <i class="fas fa-ghost"></i>
+                        </div>
+                        <p class="text-lg">Tu continueras à te faire ghoster par tes prospects</p>
+                    </div>
+                    
+                    <div class="bg-red-50 p-6 rounded-xl border border-red-100">
+                        <div class="text-4xl text-red-500 mb-4">
+                            <i class="fas fa-phone-slash"></i>
+                        </div>
+                        <p class="text-lg">Tu passeras tes journées à convaincre et relancer au lieu de coacher ou former</p>
+                    </div>
+                    
+                    <div class="bg-red-50 p-6 rounded-xl border border-red-100">
+                        <div class="text-4xl text-red-500 mb-4">
+                            <i class="fas fa-business-time"></i>
+                        </div>
+                        <p class="text-lg">Ton business restera non structuré et non scalable</p>
+                    </div>
+                    
+                    <div class="bg-red-50 p-6 rounded-xl border border-red-100">
+                        <div class="text-4xl text-red-500 mb-4">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <p class="text-lg">Tu resteras prisonnier de ton temps, sans liberté réelle</p>
+                    </div>
+                </div> <br>
+
+                <p><strong>Pendant ce temps; Yomi DENZEL et Alec HENRY utilisent ce même système pour vendre chaque jour.</strong></p>
+                
+                <div class="mt-16">
+                    <div class="inline-block p-8 bg-blue-50 rounded-2xl">
+                        <h3 class="text-2xl font-bold mb-4">👉 Et ce système ? Il est juste devant toi.</h3>
+                        <a href="https://tally.so/r/3y58v6" class="btn-primary bg-primary hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-lg text-lg mt-4 inline-block">
+                            ➡️ Réserve ton audit maintenant
+                        </a>
+                        <p class="mt-4 text-gray-600 italic">NB : Il est important de noter que si tu ne respectes pas le rendez-vous pris de ton initiative, nous nous réservons le droit de t’exclure définitivement de tout autre appel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- FAQs -->
+<section id="faq" class="py-16 bg-light text-textDark">
+  <div class="container mx-auto px-4 max-w-3xl">
+    <h2 class="text-3xl font-heading font-bold mb-8 text-primary text-center">FAQ – Questions courantes</h2>
+    <div class="space-y-4">
+      <!-- Item 1 -->
+      <div class="border border-neutral rounded-lg overflow-hidden">
+        <button class="w-full flex justify-between items-center p-4 bg-neutral hover:bg-neutral/50 faq-question">
+          <span><strong>Est-ce que je vais sacrifier ma méthode actuelle et risquer de faire 0 € le mois prochain ?</strong></Est-ce></span>
+          <svg class="w-6 h-6 transform transition-transform shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div class="p-4 hidden faq-answer bg-white">
+          <p>Pas du tout. Ma méthode ne remplace pas brutalement ce que tu fais déjà – elle le complète.</p>
+          <p>Tu continues tes actions actuelles, mais avec en plus un canal plus stable, moins épuisant, qui bosse pour toi même quand tu ne fais rien. L’objectif est : plus de résultats, moins de temps investi.</p>
+        </div>
+      </div>
+       <!-- Item 2 -->
+      <div class="border border-neutral rounded-lg overflow-hidden">
+        <button class="w-full flex justify-between items-center p-4 bg-neutral hover:bg-neutral/50 faq-question">
+            <span class="w-full text-center font-semibold">Et comment ça se passe après la réalisation ?</span>
+            <svg class="w-6 h-6 transform transition-transform shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+        </button>
+        <div class="p-4 hidden faq-answer bg-white">
+          <p>Après livraison, je t’accompagne encore.</p>
+          <p>Tu bénéficies d’un suivi gratuit de 30 jours pour évaluer les résultats, ajuster si besoin, et t’assurer que le système tourne à ton image.</p>
+          <p>En savoir plus au call....</p>
+        </div>
+      </div>
+
+      <!-- Item 1 -->
+      <div class="border border-neutral rounded-lg overflow-hidden">
+        <button class="w-full flex justify-between items-center p-4 bg-neutral hover:bg-neutral/50 faq-question">
+          <span class="w-full text-center font-semibold">Pourquoi as-tu laisser l'e-commerçe ?</Est-ce></span>
+          <svg class="w-6 h-6 transform transition-transform shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div class="p-4 hidden faq-answer bg-white">
+          <p>Après avoir compris le sens de cette phrase : "Le succès ne se mesure pas à l'argent mais à l'impact que vous avez dans la vie des gens."</p>
+          <p>Je faisais de l'argent mais il me manquait une chose "ma mission", celle d'impacter et d'aider les gens sans quoi vous ne seriez en train de lire ceci.</p>
+        </div>
+      </div>
+     <!-- Ajouter d'Item -->
+    </div>
+  </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center">
+                            <span class="text-white font-bold">A</span>
+                        </div>
+                        <h2 class="ml-3 text-xl font-heading font-black">AKIRATEK</h2>
+                    </div>
+                    <p class="mt-4 text-gray-400 max-w-md">
+                        Système d'Acquisition Web pour coachs, consultants et formateurs qui veulent attirer des clients qualifiés sans dépendre des DM.
+                    </p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <p>Suivez-nous</p>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-8 text-center text-gray-500">
+                <p>Automatise - Rayonne - Maitrise</p>
+                <p>© 2025 AKIRATEK - Agency. Tous droits réservés.</p>
+                <p class="mt-2 text-sm">Système d'Acquisition Web Marketing</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Merci pour votre demande ! Nous vous contacterons très bientôt pour confirmer votre audit.');
+                form.reset();
+            });
+        }
+    </script>
+
+    <!-- FAQs JS -->
+    <script>
+      document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+      const answer = btn.nextElementSibling;
+      const icon = btn.querySelector('svg');
+      answer.classList.toggle('hidden');
+      icon.classList.toggle('rotate-180');
+        });
+     });
+    </script>
+
+
+</body>
+</html>
